@@ -1,0 +1,24 @@
+#
+### ZSH Config
+#
+
+# use antigen
+source $HOME/.antigen.zsh
+
+# use oh-my-zsh
+antigen use oh-my-zsh
+
+# add bundles
+antigen bundle git
+antigen bundle sudo
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
+
+# set theme
+antigen theme gnzh
+
+# apply antigen
+antigen apply
+
+# fix $TERM
+export TERM=xterm-256color
