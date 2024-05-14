@@ -15,7 +15,7 @@
     // modules
     "modules-left": [ "hyprland/workspaces", "hyprland/submap", "hyprland/window" ],
     "modules-center": [ "clock" ],
-    "modules-right": [ "network", "pulseaudio", "battery" ],
+    "modules-right": [ "network", "custom/wireguard", "pulseaudio", "battery" ],
 
     // workspaces
     "hyprland/workspaces": {
@@ -42,6 +42,16 @@
 	"format-linked": "[  UNKNOWN ]",
 	"format-disconnected": "[  DISCONNECTED ]",
 	"format": "[  DISCONNECTED ]"
+    },
+
+    // wireguard vpn
+    "custom/wireguard": {
+	"format": "[ {} ]",
+	"exec": "/home/portalbyte/Scripts/wireguard.sh",
+	"return-type": "json",
+	"interval": 3,
+
+	"on-click": "if [ -d /sys/class/net/Mullvad ]; then sudo wg-quick down Mullvad; else sudo wg-quick up Mullvad; fi; sleep 1"
     },
 
     // audio

@@ -1,8 +1,8 @@
-//
-// Waybar Styling
-//
+/*
+** Waybar Styling
+*/
 
-// global
+/* global */
 * {
     min-height: 0;
 
@@ -11,7 +11,7 @@
     border-radius: 0;
 }
 
-// bar
+/* bar */
 window#waybar {
     background-color: #1E1E2E;
     color: #CDD6F7;
@@ -19,74 +19,84 @@ window#waybar {
     border-top: 2px solid #CBA6F7;
 }
 
-// empty workspace
+/* empty workspace */
 #workspaces button.empty {
     color: #6C7086;
 }
 
-// current workspace (second monitor)
+/* current workspace (second monitor) */
 #workspaces button.visible {
     color: #CBA6F7;
 }
 
-// current workspace
+/* current workspace */
 #workspaces button.active {
     background-color: #CBA6F7;
     color: #1E1E2E;
 }
 
-// current window
+/* current window */
 #window {
     padding: 0 8px;
 }
 
-// current network
+/* current network */
 #network {
     padding: 0 8px;
 }
 
-// no internet
+/* no internet */
 #network.disabled,
 #network.disconnected {
     color: #F38BA8;
 }
 
-// unknown internet connection
+/* unknown internet connection */
 #network.linked {
     color: #FAB387;
 }
 
-// audio
+/* wireguard*/
+#custom-wireguard {
+    padding: 0 8px;
+}
+
+/* inactive wireguard */
+#custom-wireguard.inactive {
+    color: #F38BA8;
+}
+
+/* audio */
 #pulseaudio {
     padding: 0 8px;
 }
 
-// bluetooth connection
+/* bluetooth connection */
 #pulseaudio.bluetooth {
     color: #89B4FA;
 }
 
-// muted audio
+/* muted audio */
 #pulseaudio.muted {
     color: #F38BA8;
 }
 
-// battery
+/* battery */
 #battery {
     padding: 0 8px;
 }
 
-// low battery
+/* low battery */
 #battery.warning {
     color: #FAB387;
 }
 
-// very low battery
+/* very low battery */
 #battery.critical {
     color: #F38BA8
 }
 
-// full battery
+/* full battery */
 #battery.charging,
 #battery.full {
     color: #A6E3A1;
