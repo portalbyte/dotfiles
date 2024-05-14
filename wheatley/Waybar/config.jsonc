@@ -1,0 +1,68 @@
+//
+// Waybar Config
+//
+
+{
+
+    // positioning
+    "layer": "top",
+    "position": "bottom",
+    "height": 36,
+
+    // styles
+    "reload_style_on_change": true,
+
+    // modules
+    "modules-left": [ "hyprland/workspaces", "hyprland/submap", "hyprland/window" ],
+    "modules-center": [ "clock" ],
+    "modules-right": [ "network", "pulseaudio", "battery" ],
+
+    // workspaces
+    "hyprland/workspaces": {
+
+	// always show all workspaces
+	"persistent-workspaces": {
+	    "*": 10
+	}
+    },
+
+    // current window
+    "hyprland/window": {
+
+        "format": "[ {title} ]",
+
+	// only show window on current monitor
+	"seperate-outputs": true
+    },
+
+    // network connection
+    "network": {
+        "format-wifi": "[  {essid} ]",
+	"format-ethernet": "[  {essid} ]",
+	"format-linked": "[  UNKNOWN ]",
+	"format-disconnected": "[  DISCONNECTED ]",
+	"format": "[  DISCONNECTED ]"
+    },
+
+    // audio
+    "pulseaudio": {
+	"format": "[ {icon} {volume}% ]",
+	"format-bluetooth": "[  {volume}% ]",
+	"format-muted": "[  MUTE ]",
+	"format-icons": [ "", "" ],
+
+	"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+    },
+    
+    // battery percentage
+    "battery": {
+	"format": "[ {icon} {capacity}% ]",
+	"format-charging": "[ {icon} {capacity}%+ ]",
+	"format-icons": [ "", "", "", "" ],
+
+	"states": {
+	    "warning": 20,
+	    "critical": 10
+	}
+    }
+}
