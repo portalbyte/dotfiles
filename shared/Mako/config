@@ -5,7 +5,7 @@
 # sizing
 width=512
 height=256
-anchor=bottom-right
+anchor=top-right
 margin=8
 padding=4
 
