@@ -19,8 +19,9 @@ call plug#end()
 """ EDITOR
 
 " set tab to 4 spaces
-set shiftwidth=4 smarttab
-set tabstop=4
+set shiftwidth=4
+set tabstop=4 expandtab
+set softtabstop=4
 
 
 """ THEMING
