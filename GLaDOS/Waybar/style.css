@@ -80,24 +80,3 @@ window#waybar {
 #pulseaudio.muted {
     color: #F38BA8;
 }
-
-/* battery */
-#battery {
-    padding: 0 8px;
-}
-
-/* low battery */
-#battery.warning {
-    color: #FAB387;
-}
-
-/* very low battery */
-#battery.critical {
-    color: #F38BA8
-}
-
-/* full battery */
-#battery.charging,
-#battery.full {
-    color: #A6E3A1;
-}
