@@ -1,0 +1,56 @@
+//
+// Waybar Config
+//
+
+{
+
+    // positioning
+    "layer": "top",
+    "position": "bottom",
+    "height": 36,
+
+    // styles
+    "reload_style_on_change": true,
+
+    // modules
+    "modules-left": [ "hyprland/workspaces", "hyprland/submap", "hyprland/window" ],
+    "modules-center": [ "clock" ],
+    "modules-right": [ "network", "custom/wireguard", "pulseaudio", "battery" ],
+
+    // workspaces
+    "hyprland/workspaces": {
+
+	    // always show all workspaces
+	    "persistent-workspaces": {
+	        "*": 10
+	    }
+    },
+
+    // current window
+    "hyprland/window": {
+
+        "format": "[ {title} ]",
+
+	    // only show window on current monitor
+    	"seperate-outputs": true
+    },
+
+    // network connection
+    "network": {
+        "format-wifi": "[  {essid} ]",
+    	"format-ethernet": "[  {essid} ]",
+	    "format-linked": "[  UNKNOWN ]",
+	    "format-disconnected": "[  DISCONNECTED ]",
+	    "format": "[  DISCONNECTED ]"
+    },
+
+    // wireguard vpn
+    "custom/wireguard": {
+    	"format": "[ {} ]",
+	    "exec": "/home/portalbyte/Scripts/wireguard.sh",
+    	"return-type": "json",
+	    "interval": 3,
+
+    	"on-click": "if [ -d /sys/class/net/Mullvad ]; then sudo wg-quick down Mullvad; else sudo wg-quick up Mullvad; fi; sleep 1"
+    }
+}
