@@ -20,10 +20,10 @@
     // workspaces
     "hyprland/workspaces": {
 
-	// always show all workspaces
-	"persistent-workspaces": {
-	    "*": 10
-	}
+        // always show all workspaces
+        "persistent-workspaces": {
+            "*": 10
+        }
     },
 
     // current window
@@ -31,48 +31,48 @@
 
         "format": "[ {title} ]",
 
-	// only show window on current monitor
-	"seperate-outputs": true
+        // only show window on current monitor
+        "seperate-outputs": true
     },
 
     // network connection
     "network": {
         "format-wifi": "[  {essid} ]",
-	"format-ethernet": "[  {essid} ]",
-	"format-linked": "[  UNKNOWN ]",
-	"format-disconnected": "[  DISCONNECTED ]",
-	"format": "[  DISCONNECTED ]"
+        "format-ethernet": "[  {essid} ]",
+        "format-linked": "[  UNKNOWN ]",
+        "format-disconnected": "[  DISCONNECTED ]",
+        "format": "[  DISCONNECTED ]"
     },
 
     // wireguard vpn
     "custom/wireguard": {
-	"format": "[ {} ]",
-	"exec": "/home/portalbyte/Scripts/wireguard.sh",
-	"return-type": "json",
-	"interval": 3,
+        "format": "[ {} ]",
+        "exec": "/home/portalbyte/Scripts/wireguard.sh",
+        "return-type": "json",
+        "interval": 3,
 
-	"on-click": "if [ -d /sys/class/net/Mullvad ]; then sudo wg-quick down Mullvad; else sudo wg-quick up Mullvad; fi; sleep 1"
+        "on-click": "if [ -d /sys/class/net/ProtonVPN ]; then sudo wg-quick down ProtonVPN; else sudo wg-quick up ProtonVPN; fi; sleep 1"
     },
 
     // audio
     "pulseaudio": {
-	"format": "[ {icon} {volume}% ]",
-	"format-bluetooth": "[  {volume}% ]",
-	"format-muted": "[  MUTE ]",
-	"format-icons": [ "", "" ],
+        "format": "[ {icon} {volume}% ]",
+        "format-bluetooth": "[  {volume}% ]",
+        "format-muted": "[  MUTE ]",
+        "format-icons": [ "", "" ],
 
-	"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
     },
     
     // battery percentage
     "battery": {
-	"format": "[ {icon} {capacity}% ]",
-	"format-charging": "[ {icon} {capacity}%+ ]",
-	"format-icons": [ "", "", "", "" ],
+        "format": "[ {icon} {capacity}% ]",
+        "format-charging": "[ {icon} {capacity}%+ ]",
+        "format-icons": [ "", "", "", "" ],
 
-	"states": {
-	    "warning": 20,
-	    "critical": 10
-	}
+        "states": {
+            "warning": 20,
+            "critical": 10
+        }
     }
 }

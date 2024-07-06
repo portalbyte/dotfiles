@@ -47,11 +47,11 @@
     // wireguard vpn
     "custom/wireguard": {
     	"format": "[ {} ]",
-	    "exec": "/home/portalbyte/Scripts/wireguard.sh",
+	    "exec": "/home/portalbyte/Scripts/Linux/wireguard.sh",
     	"return-type": "json",
 	    "interval": 3,
 
-    	"on-click": "if [ -d /sys/class/net/Mullvad ]; then sudo wg-quick down Mullvad; else sudo wg-quick up Mullvad; fi; sleep 1"
+    	"on-click": "if [ -d /sys/class/net/ProtonVPN ]; then sudo wg-quick down ProtonVPN; else sudo wg-quick up ProtonVPN; fi; sleep 1"
     },
 
     
