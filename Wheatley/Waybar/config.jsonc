@@ -15,7 +15,7 @@
     // modules
     "modules-left": [ "hyprland/workspaces", "hyprland/submap", "hyprland/window" ],
     "modules-center": [ "clock" ],
-    "modules-right": [ "network", "custom/wireguard", "pulseaudio", "battery" ],
+    "modules-right": [ "keyboard-state", "network", "custom/wireguard", "pulseaudio", "battery" ],
 
     // workspaces
     "hyprland/workspaces": {
@@ -35,6 +35,16 @@
         "seperate-outputs": true
     },
 
+    // caps lock
+    "keyboard-state": {
+        "capslock": true,
+        "format": "{icon}",
+        "format-icons": {
+            "locked": "[  ]",
+            "unlocked": ""
+        }
+    },
+
     // network connection
     "network": {
         "format-wifi": "[  {essid} ]",
@@ -47,7 +57,7 @@
     // wireguard vpn
     "custom/wireguard": {
         "format": "[ {} ]",
-        "exec": "/home/portalbyte/Scripts/wireguard.sh",
+        "exec": "/home/portalbyte/Scripts/Linux/wireguard.sh",
         "return-type": "json",
         "interval": 3,
 

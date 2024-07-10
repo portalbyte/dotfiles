@@ -40,6 +40,12 @@ window#waybar {
     padding: 0 8px;
 }
 
+/* keyboard state */
+#keyboard-state {
+    padding: 0 8px;
+    color: #F38BA8;
+}
+
 /* current network */
 #network {
     padding: 0 8px;
